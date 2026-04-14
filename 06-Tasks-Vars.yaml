@@ -1,7 +1,7 @@
 - name: Printing the Variable from tasks level
   hosts: local
   connection: local
-  vars: # PLAY level variables, global variables
+  vars: #  PLAY level variables, global variables
     auth: Anudeep
     course: Ansible
     learn: Devops
