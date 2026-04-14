@@ -1,6 +1,7 @@
 - name: PLAY1
   hosts: local
   connection: local # managing its own node, no need of credentials
+  tags: play1
   tasks:
   - name: PLAY1 and TASK1
     ansible.builtin.debug:
@@ -9,6 +10,7 @@
 - name: PLAY2
   hosts: local
   connection: local # managing its own node, no need of credentials
+  tags: play2
   tasks:
   - name: PLAY2 and TASK2
     ansible.builtin.debug:
