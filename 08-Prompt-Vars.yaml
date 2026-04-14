@@ -1,6 +1,6 @@
 - name: Printing Varibale from Prompt
   hosts: local
-  connecction: local
+  connection: local
   vars_prompt:
   - name: auth
     prompt: Please enter auth name
