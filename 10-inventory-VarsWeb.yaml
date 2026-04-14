@@ -1,0 +1,6 @@
+- name: Printing Variables from Inventory file
+  hosts: web
+  tasks:
+  - name: Printing variable from Inventory ini file
+    ansible.builtin.debug:
+      msg: "Hi team, I'm {{auth}}, {{course}} is the configuration management tool in {{learn}}"
