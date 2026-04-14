@@ -1,7 +1,8 @@
 # ansible<br>
-<h1>ansible</h1>h1><br>
-Create a File:<br>
+<br>
+<br>
+<h2>Create a File:</h2><br>
 ansible web -i inventory.ini -m file -a "path=~/anudeep.txt state=touch" -b <br>
 
-Copy file:<br>
+<h2>Copy file:</h2><br>
 ansible web -i inventory.ini -m copy -a "src=index.html dest=~/" -b<br>
