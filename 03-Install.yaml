@@ -1,6 +1,6 @@
 - name: Install nginx
   hosts: web
-  become: yes #root or sudo user
+  become: yes # root or sudo user
   tasks:
   - name: Install nginx
     ansible.builtin.package:
