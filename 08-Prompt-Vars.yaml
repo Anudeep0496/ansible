@@ -1,0 +1,17 @@
+- name: Printing Varibale from Prompt
+  hosts: local
+  connecction: local
+  vars_prompt:
+  - name: auth
+    prompt: Please enter auth name
+    private: true # it is not confidential information
+  - name: course
+    prompt: Please enter course name
+    private: false # it is not confidential information
+  - name: learn
+    prompt: Please enter learn name
+    private: false # it is not confidential information
+  tasks:
+  - name: Printing the Variables from the Prompt
+    ansible.builtin.debug:
+      msg: Hi team, I'm {{auth}}, {{course}} is the configuration management tool in {{learn}}

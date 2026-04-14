@@ -5,5 +5,5 @@
   - env-var.yaml
   tasks:
   - name: Printing Varibale from Different file
-    anible.builtin.debug:
+    ansible.builtin.debug:
       msg: Hi team, I'm {{auth}}, {{course}} is the configuration management tool in {{learn}}
