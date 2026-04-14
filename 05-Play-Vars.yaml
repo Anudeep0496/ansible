@@ -1,7 +1,7 @@
 - name: Variable From Play Level
   hosts: local
   connection: local
-  vars: # PLAY level variables
+  vars: #  PLAY level variables
     auth: Anudeep
     course: Ansible
     learn: Devops
