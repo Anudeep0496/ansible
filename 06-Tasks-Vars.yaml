@@ -1,0 +1,17 @@
+- name: Printing the Variable from tasks level
+  hosts: local
+  connection: local
+  vars: # PLAY level variables, global variables
+    auth: Anudeep
+    course: Ansible
+    learn: Devops
+  tasks:
+  - name: print the variables at Task level
+    vars: # Task level variables, accessible only with in the task. Task variables can override play level variables. Local variables
+    auth: Deepu
+    ansible.builtin.debug:
+      msg: Hi team, I'm {{auth}}, {{course}} is the configuration management tool in {{learn}}
+
+  - name: print the variables
+    ansible.builtin.debug:
+      msg: Hi team, I'm {{auth}}, {{course}} is the configuration management tool in {{learn}}

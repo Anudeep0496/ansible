@@ -8,4 +8,4 @@
   tasks:
   - name: Printing the Variables from Play Level
     ansible.builtin.debug:
-    msg: Hi team, I'm {{auth}}, {{course}} is the configuration management tool in {{learn}}
+      msg: Hi team, I'm {{auth}}, {{course}} is the configuration management tool in {{learn}}

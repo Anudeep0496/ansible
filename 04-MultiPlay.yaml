@@ -5,7 +5,7 @@
   tasks:
   - name: PLAY1 and TASK1
     ansible.builtin.debug:
-    msg: "Hi Team, This Message is printing from PLAY1 and TASK1"
+      msg: "Hi Team, This Message is printing from PLAY1 and TASK1"
 
 - name: PLAY2
   hosts: local
@@ -14,4 +14,4 @@
   tasks:
   - name: PLAY2 and TASK2
     ansible.builtin.debug:
-    msg: "Hi Team, This Message is printing from PLAY2 and TASK2"
+      msg: "Hi Team, This Message is printing from PLAY2 and TASK2"
