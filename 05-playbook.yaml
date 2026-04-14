@@ -1,0 +1,11 @@
+- name: Variable From Play Level
+  hosts: local
+  connection: local
+  vars: # PLAY level variables
+    auth: Anudeep
+    course: Ansible
+    learn: Devops
+  tasks:
+  - name: Printing the Variables from Play Level
+    ansible.builtin.debug:
+    msg: Hi team, I'm {{auth}}, {{course}} is the configuration management tool in {{learn}}
