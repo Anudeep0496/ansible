@@ -1,6 +1,6 @@
 - name: PLAY1
   hosts: local
-  connection: local # managing its own node, no need of credentials
+  connection: local # managing its own node,  no need of credentials
   tags: play1
   tasks:
   - name: PLAY1 and TASK1
