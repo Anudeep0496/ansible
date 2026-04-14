@@ -1,6 +1,6 @@
 - name: Print a Message
   hosts: web
   tasks:
-  - name: print hello world
+  - name: print a message from Ansible server
     ansible.builtin.debug:
       msg: Hi NodeServer, You are printing this Message from the Ansible Playbook.

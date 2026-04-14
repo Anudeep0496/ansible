@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars_files:
-  - env-var.yaml
+  - env-var.yaml # Variables will call from this file
   tasks:
   - name: Printing Varibale from Different file
     ansible.builtin.debug:
