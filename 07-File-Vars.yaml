@@ -1,0 +1,9 @@
+- name: Printing Variable from env var file
+  hosts: local
+  connection: local
+  vars_files:
+  - env-var.yaml
+  tasks:
+  - name: Printing Varibale from Different file
+    anible.builtin.debug:
+      msg: Hi team, I'm {{auth}}, {{course}} is the configuration management tool in {{learn}}
