@@ -5,3 +5,9 @@
   - name: Printing the values using Filters
     ansible.builtin.debug:
       msg: "Hello {{ person | default('Anudeep') }}"
+  
+  - name: convert string to list
+    vars:
+      persons: "Anudeep, Gummy, David" #String
+    ansible.builtin.debug:
+      msg: "Persons are: {{ persons | split(',') }}"
