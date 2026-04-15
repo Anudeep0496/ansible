@@ -1,5 +1,6 @@
 - name: Filters or functions
   hosts: local
+  connection: local
   tasks:
   - name: Printing the values using Filters
     ansible.builtin.debug:
