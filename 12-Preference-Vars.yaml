@@ -1,0 +1,18 @@
+- name: Printing Variables based on preference
+  hosts: local
+  connection: local
+  vars: #  PLAY level variables
+    WLevel: Play
+  vars_prompt:
+  - Wlevel: vars_prompt  #  PROMPT level variables
+    prompt: Enter the level
+    private: false
+  vars_files:
+  - env-var.yaml #  FILE level variables
+  tasks:
+  - name: Priniting Variables
+    vars:
+      Wlevel: Task #  TASK level variables
+    ansible.builtin.debug:
+      msg: Hello I'm printing msg from {{Wlevel}}
+    
