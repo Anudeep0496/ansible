@@ -4,9 +4,9 @@
   vars: #  PLAY level variables
     WLevel: Play
   vars_prompt:
-  - Wlevel: vars_prompt  #  PROMPT level variables
-    prompt: Enter the level
-    private: false
+  - name: Wlevel
+    prompt: Please enter Wlevel name
+    private: false # it is not confidential information
   vars_files:
   - env-var.yaml #  FILE level variables
   tasks:
