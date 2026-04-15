@@ -8,7 +8,8 @@
   
   - name: Executing
     #ansible.builtin.command: ls -ltr > /tmp/output.txt
-    ansible.builtin.shell: ls -ltr
+    #ansible.builtin.command: lsss -ltrssfff # exit status 0
+    ansible.builtin.shell: ls -ltr # exit status 1
     register: command_result
 
   - name: Print the output
