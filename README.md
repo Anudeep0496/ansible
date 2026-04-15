@@ -20,3 +20,8 @@ ansible-playbook -i inventory.ini 11-Args-Vars.yaml -e "auth=Anudeep" -e "course
 4. Prompt
 5. Play
 6. Inventory
+
+<h3>Ad-hoc Commands</h3>
+ansible all -i inventory.ini -b -m service -a "name=nginx state=started"<br>
+
+ansible all -i inventory.ini -m shell -a "systemctl status nginx"<br>
