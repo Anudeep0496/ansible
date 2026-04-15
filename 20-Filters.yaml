@@ -29,3 +29,31 @@
       - {'key': 'trainee', 'value': 'Anudeep'}
     ansible.builtin.debug:
       msg: "Course info: {{ course | items2dict }}"
+
+  - name: convert upper to lower
+    tags:
+    - uppertolower
+    vars:
+      name: "Anudeep"
+    ansible.builtin.debug:
+      msg: "Hello {{ name | lower }}"
+
+  - name: convert lower to upper
+    tags:
+    - lowertoupper
+    vars:
+      name: "Anudeep"
+    ansible.builtin.debug:
+      msg: "Hello {{ name | upper }}"
+
+  - name: print min and max
+    vars:
+      numbers: [134,350,6257,2787,9787,83937]
+    ansible.builtin.debug:
+      msg: "Min is: {{ numbers | min }}, Max is: {{ numbers | max }}"
+
+  - name: check ipaddress is valid or not
+    vars:
+      ip: "35849.1392832.3423"
+    ansible.builtin.debug:
+      msg: "{{ ip | ansible.utils.ipaddr }}"
