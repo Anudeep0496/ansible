@@ -1,18 +1,17 @@
-  - name: Create EC2 Instances (frontend, backend, mysql)
-    hosts: localhost
-    connection: local
-    gather_facts: false
+---
+- name: Create EC2 Instances (frontend, backend, mysql)
+  hosts: localhost
+  connection: local
+  gather_facts: false
 
-    vars:
+  vars:
     region: us-east-1
     instance_type: t3.micro
     key_name: learningdevops
     security_group: default
 
-    # 🔥 Dynamic AMI (Amazon Linux 2023 latest)
-    image_id: "{{ lookup('aws_ssm', '/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64') }}"
-
-    tasks:
+    image_id: ami-0c02fb55956c7d316
+  tasks:
 
     - name: Create frontend instance
       amazon.aws.ec2_instance:
@@ -22,7 +21,7 @@
         image_id: "{{ image_id }}"
         region: "{{ region }}"
         security_group: "{{ security_group }}"
-        wait: yes
+        wait: true
 
     - name: Create backend instance
       amazon.aws.ec2_instance:
@@ -32,7 +31,7 @@
         image_id: "{{ image_id }}"
         region: "{{ region }}"
         security_group: "{{ security_group }}"
-        wait: yes
+        wait: true
 
     - name: Create mysql instance
       amazon.aws.ec2_instance:
@@ -42,4 +41,4 @@
         image_id: "{{ image_id }}"
         region: "{{ region }}"
         security_group: "{{ security_group }}"
-        wait: yes
+        wait: true
