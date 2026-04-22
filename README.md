@@ -27,6 +27,19 @@ ansible-vault create <file-name>.yaml<br>
 create servers<br>
 de commissiong ansible vault and replace with secret manager or paramter store<br>
 
+=====<br>
+Ansible static inventory<br>
+==========================<br>
+inventory --> a list of hosts and groups, this is static <br>
+
+Dynamic --> when traffic increases, servers should be increased, when traffic decrased servers should be terminated<br>
+
+dynamic inventory<br>
+=================<br>
+ansible can connect to dynamic environments like cloud aws, azure, gcp, etc. It has to query the servers based on the parameters we give<br>
+
+ssh-keygen -t rsa<br>
+
 
 <h3>Ad-hoc Commands</h3>
 ansible all -i inventory.ini -b -m service -a "name=nginx state=started"<br>
